@@ -10,6 +10,7 @@ for(let i = 1; i <= 100; i++){
 
     const cell = document.createElement("div");
     cell.classList.add("cell");
+    let fizzBuzz = "";
 
     if( i % 3 === 0 && i % 5 === 0){
         fizzBuzz = "fizzbuzz";
