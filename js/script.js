@@ -6,28 +6,57 @@
 const row = document.querySelector(".row");
 
 // ELABORAZIONE
-for(let i = 1; i <= 100; i++){
+// for(let i = 1; i <= 100; i++){
 
-    const cell = document.createElement("div");
-    cell.classList.add("cell");
+//     const cell = document.createElement("div");
+//     cell.classList.add("cell");
+//     let fizzBuzz = "";
+
+//     if( i % 3 === 0 && i % 5 === 0){
+//         fizzBuzz = "fizzbuzz";
+//         cell.classList.add(fizzBuzz);
+//         cell.innerHTML = fizzBuzz;
+//     } else if( i % 3 === 0){
+//         fizzBuzz = "fizz";
+//         cell.classList.add(fizzBuzz);
+//         cell.innerHTML = fizzBuzz
+//     } else if( i % 5 === 0){
+//         fizzBuzz = "buzz";
+//         cell.classList.add(fizzBuzz);
+//         cell.innerHTML = fizzBuzz
+//     } else {
+//         cell.innerHTML = i;
+//     }
+
+//     // OUTPUT
+//     row.append(cell);
+// }
+
+
+// SECONDO METODO
+for(let i = 1; i <= 100; i++){
     let fizzBuzz = "";
 
     if( i % 3 === 0 && i % 5 === 0){
         fizzBuzz = "fizzbuzz";
-        cell.classList.add(fizzBuzz);
-        cell.innerHTML = fizzBuzz;
     } else if( i % 3 === 0){
         fizzBuzz = "fizz";
-        cell.classList.add(fizzBuzz);
-        cell.innerHTML = fizzBuzz
     } else if( i % 5 === 0){
         fizzBuzz = "buzz";
+    }
+
+    // OUTPUT
+    const cell = document.createElement("div");
+    cell.classList.add("cell");
+
+    if(fizzBuzz !== ""){
         cell.classList.add(fizzBuzz);
-        cell.innerHTML = fizzBuzz
+        cell.innerHTML = fizzBuzz;
     } else {
         cell.innerHTML = i;
     }
 
-    // OUTPUT
     row.append(cell);
 }
+
+
