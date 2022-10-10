@@ -3,16 +3,30 @@
  Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
 */
 
+const row = document.querySelector(".row");
+
 // ELABORAZIONE
 for(let i = 1; i <= 100; i++){
-    
+
+    const cell = document.createElement("div");
+    cell.classList.add("cell");
+
     if( i % 3 === 0 && i % 5 === 0){
-        console.log(i, "FizzBuzz");
+        fizzBuzz = "fizzbuzz";
+        cell.classList.add(fizzBuzz);
+        cell.innerHTML = fizzBuzz;
     } else if( i % 3 === 0){
-        console.log(i, "Fizz");
+        fizzBuzz = "fizz";
+        cell.classList.add(fizzBuzz);
+        cell.innerHTML = fizzBuzz
     } else if( i % 5 === 0){
-        console.log(i, "Buzz");
+        fizzBuzz = "buzz";
+        cell.classList.add(fizzBuzz);
+        cell.innerHTML = fizzBuzz
     } else {
-        console.log(i);
+        cell.innerHTML = i;
     }
+
+    // OUTPUT
+    row.append(cell);
 }
